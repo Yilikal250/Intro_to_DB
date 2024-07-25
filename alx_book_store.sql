@@ -28,10 +28,11 @@ CREATE TABLE Orders (
     email VARCHAR(215),
     order_date DATE
 );
-["order_id INT", "customer_id INT", "FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)"]
+
 CREATE TABLE Order_Details (
     orderdetailid PRIMARY KEY,
-    order_id (Foreign Key referencing Orders table),
-    book_id (Foreign Key referencing Books table),
+    order_id (FOREIGN KEY (order_id) REFERENCES Orders(order_id)),
+    book_id (FOREIGN KEY (book_id) REFERENCES Books(book_id)),
     quantity DOUBLE
 );
+
