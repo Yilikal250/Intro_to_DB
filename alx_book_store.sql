@@ -1,4 +1,4 @@
--- Books: Stores information about books available in the bookstore.
+CREATE DATABASE IF NOT EXISTS alx_book_store
 
 CREATE TABLE Books (
     book_id (Primary Key),
